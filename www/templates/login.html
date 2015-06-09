@@ -1,0 +1,21 @@
+<ion-view title="Login">
+  <ion-content class="padding">
+  <div>
+  	<div class="card" ng-if="errormsg">
+  		<div class="item">{{errormsg}}</div>
+  	</div>
+  </div>
+  <form name="loginfrm" ng-submit="doLogin(loginfrm)" novalidate>
+    <div class="list">
+	  <label class="item item-input">
+	    <input type="email" placeholder="Email" ng-model="user.email" required>
+	  </label>
+	  <label class="item item-input">
+	    <input type="password" placeholder="Password" ng-model="user.pass" required>
+	  </label>
+	  <button class="button button-positive button-full">Login</button>
+    </div>
+    </form>
+    <a href="#/guest" class="button button-positive button-full">Proceed as a guest</a>
+  </ion-content>
+</ion-view>
